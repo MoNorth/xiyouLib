@@ -1,0 +1,41 @@
+.openCard,.none{
+	display: none;
+}
+.bottom{
+	width: 100%;
+	position: absolute;
+	bottom: 30px;
+}
+#login img{
+	width: 90%;
+	margin: 0 5%;
+	margin-top: 1.3rem;
+}
+#login p{
+	background-color: white;
+	text-align: center;
+	height: 2rem;
+	line-height: 2rem;
+}
+#search img{
+	width: 100%;
+}
+.popup{
+	height:100%;
+}
+.red{
+	color: red;
+}
+
+#newsDetail img{
+	width: 100%;
+}
+.panel .button{
+	width: 80%;
+	margin: 0 auto;
+	height: 1.6rem;
+	line-height: 1.6rem;
+}
+html{
+	overflow: hidden;
+}

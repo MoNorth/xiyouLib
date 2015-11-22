@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SUI demo</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="//g.alicdn.com/sui-mobile/sm/0.5.0/css/sm.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+  </head>
+  <body>
+    <!-- html代码 -->
+    <!-- 首页 -->
+    <div class="page" id="search">
+      <header class="bar bar-nav">
+        <a class="icon icon-me pull-left open-panel"></a>
+        <!-- <a class="icon icon-refresh pull-right"></a> -->
+        <h1 class="title">西邮图书馆</h1>
+      </header>
+      <!-- 标题栏 -->
+      <nav class="bar bar-tab">
+        <a class="tab-item " href="#myLib">
+          <span class="tab-label">我的图书馆</span>
+        </a>
+        <a class="tab-item active" href="#">
+          <span class="tab-label">搜索排行</span>
+        </a>
+        <a class="tab-item" href="#news">
+          <span class="tab-label">公告</span>
+        </a>
+      </nav>
+
+
+
+
+      <!-- 内容 -->
+      <div class="content">
+        <img src="img/bk.jpg" alt="">
+        <div class="content-padded">
+              <div class="search-input">
+                <label class="icon icon-search" for="search"></label>
+                <input type="search" id='searchword' placeholder='输入关键字...'/>
+              </div>
+              <p><a href="#" class="button" id="getFind">搜索</a></p>
+        <div class="c">
+            <div class="content-block-title">排行榜</div>
+              <div class="list-block">
+                <ul>
+                  <li class="item-content item-link">
+                    <div class="item-media"><i class="icon icon-search"></i></div>
+                    <div class="item-inner">
+                      <div class="item-title">借阅排行</div>
+                      <div class="item-after">展开</div>
+                    </div>
+                  </li>
+                  <li class="openCard"></li>
+                  
+                   <li class="item-content item-link">
+                    <div class="item-media"><i class="icon icon-search"></i></div>
+                    <div class="item-inner">
+                      <div class="item-title">收藏排行</div>
+                      <div class="item-after">展开</div>
+                    </div>
+                  </li>
+                  <li class="openCard"></li>
+                   <li class="item-content item-link">
+                    <div class="item-media"><i class="icon icon-search"></i></div>
+                    <div class="item-inner">
+                      <div class="item-title">检索排行</div>
+                      <div class="item-after">展开</div>
+                    </div>
+                  </li>
+                  <li class="openCard"></li>
+                   <li class="item-content item-link">
+                    <div class="item-media"><i class="icon icon-search"></i></div>
+                    <div class="item-inner">
+                      <div class="item-title">查看排行</div>
+                      <div class="item-after">展开</div>
+                    </div>
+                  </li>
+                  <li class="openCard"></li>
+                </ul>
+              </div>
+          </div>
+        </div>  
+      </div>
+    </div>
+
+    <!-- 登陆 -->
+    <div class="page" id="myLib">
+      <header class="bar bar-nav">
+        <a class="icon icon-me pull-left open-panel"></a>
+        <!-- <a class="icon icon-refresh pull-right"></a> -->
+        <h1 class="title">西邮图书馆</h1>
+      </header>
+      <!-- 标题栏 -->
+      <nav class="bar bar-tab">
+        <a class="tab-item active" href="#">
+          <span class="tab-label">我的图书馆</span>
+        </a>
+        <a class="tab-item" href="#search">
+          <span class="tab-label">搜索排行</span>
+        </a>
+        <a class="tab-item" href="#news">
+          <span class="tab-label">公告</span>
+        </a>
+      </nav>
+      <!-- 内容 -->
+      <div class="content">
+          <!-- 登陆 -->
+          <div id="login">
+            <img src="img/logo.png">
+            <p id="showLoginInfo">请登录</p>
+              
+            <div class="list-block">
+                    <ul>
+                      <!--  inputs -->
+                      <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title label">学号</div>
+                            <div class="item-input">
+                              <input type="text" name="id" placeholder="请输入学号...">
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title label">密码</div>
+                            <div class="item-input">
+                              <input type="password" name="psw" placeholder="初始密码123456">
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="content-block">
+                  <div class="row">
+                    <div class="col-50"><a href="#" class="button button-big button-fill button-danger reset">重置</a></div>
+                    <div class="col-50"><a href="#" class="button button-big button-fill button-success submit">提交</a></div>
+                  </div>
+               </div>
+          </div>
+          
+      </div>
+
+     
+    </div>
+
+
+
+
+
+     <!-- 我的图书馆 -->
+    <div class="page" id="RmyLib">
+      <header class="bar bar-nav">
+        <a class="icon icon-me pull-left open-panel"></a>
+        <!-- <a class="icon icon-refresh pull-right"></a> -->
+        <h1 class="title">西邮图书馆</h1>
+        <a class="pull-right button" id="exitLogin" href="#">
+          退出
+        </a>
+      </header>
+      <!-- 标题栏 -->
+      <nav class="bar bar-tab">
+        <a class="tab-item active" href="#">
+          <span class="tab-label">我的图书馆</span>
+        </a>
+        <a class="tab-item" href="#search">
+          <span class="tab-label">搜索排行</span>
+        </a>
+        <a class="tab-item" href="#news">
+          <span class="tab-label">公告</span>
+        </a>
+      </nav>
+      <!-- 内容 -->
+      <div class="content">
+          <div class="buttons-tab">
+            <a href="#tab5" class="tab-link active button">我的借阅</a>
+            <a href="#tab6" class="tab-link button">我的收藏</a>
+            <a href="#tab7" class="tab-link button">历史借阅</a>
+          </div>
+          <div class="content-block">
+            <div class="tabs">
+              <div id="tab5" class="tab active">
+                
+              </div>
+              <div id="tab6" class="tab">
+             <!--    <div class="card">
+                  <div class="card-header">%Title%
+
+                  </div>
+                  <div class="card-content">
+                     <div class="list-block media-list">
+                      <ul>
+                        <li class="item-content">
+                          <div class="item-media">
+                            <img src="%img%" width="80">
+                          </div>
+                          <div class="item-inner">
+                            <p>作者:%Author%</p>
+                            <p>出版社:%Pub%</p>
+                            <p>索书号:%Sort%</p>
+                          </div>
+                          
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="none card-footer">%ID%</div>
+                </div> -->
+              </div>
+              <div id="tab7" class="tab">
+         
+              </div>
+            </div>
+          </div>
+          
+      </div>
+
+     
+    </div>
+
+
+    <!-- 搜索结果 -->
+    <div class="page" id="findResult">
+      <header class="bar bar-nav">
+        <a class="icon icon-left pull-left back" href="#search"></a>
+        <h1 class="title">搜索结果</h1>
+      </header>
+     <!--  <nav class="bar bar-tab">
+        <a class="tab-item " href="#">
+          <span class="tab-label lastPage">上一页</span>
+        </a>
+        <a class="tab-item active" href="">
+          <span class="tab-label">6/8</span>
+        </a>
+        <a class="tab-item" href="#">
+          <span class="tab-label nextPage">下一页</span>
+        </a>
+      </nav> -->
+      <div class="content infinite-scroll">
+         <div class="list-block">
+         </div>
+        <div class="infinite-scroll-preloader">
+            <div class="preloader"></div>
+        </div>
+      </div>  
+
+    </div>
+
+
+     <!-- 图书详情 -->
+    <div class="page" id="bookInfo">
+      <header class="bar bar-nav">
+        <a class="icon icon-left pull-left back" href="#"></a>
+        <h1 class="title">搜索结果</h1>
+        <a class="icon icon-home pull-right" href="#search"></a>
+      </header>
+      <nav class="bar bar-tab">
+        <a class="tab-item " href="#">
+          <span class="tab-label lastPage" id="addFav">加入收藏夹</span>
+        </a>
+       
+      </nav>
+      <div class="content">
+        <div class="buttons-tab">
+          <a href="#tab1" class="tab-link active button">基本信息</a>
+          <a href="#tab2" class="tab-link button">图书馆</a>
+          <a href="#tab3" class="tab-link button">书籍介绍</a>
+          <a href="#tab4" class="tab-link button">相关书籍</a>
+        </div>
+        <div class="content-block">
+          <div class="tabs">
+            <div id="tab1" class="tab active">
+                <div class="card demo-card-header-pic">
+                 
+                </div>
+            </div>
+            <div id="tab2" class="tab">
+             
+             
+            </div>
+            <div id="tab3" class="tab">
+              <div class="card">
+                <div class="card-header">书籍详情</div>
+                <div class="card-content">
+                  <div class="card-content-inner">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="tab4" class="tab">
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>  
+
+    </div>
+
+
+    <!-- 新闻公告 -->
+
+      <div class="page" id="news">
+      <header class="bar bar-nav">
+        <a class="icon icon-me pull-left open-panel"></a>
+        <!-- <a class="icon icon-refresh pull-right"></a> -->
+        <h1 class="title">西邮图书馆</h1>
+      </header>
+      <!-- 标题栏 -->
+      <nav class="bar bar-tab">
+        <a class="tab-item " href="#myLib">
+          <span class="tab-label">我的图书馆</span>
+        </a>
+        <a class="tab-item" href="#search">
+          <span class="tab-label">搜索排行</span>
+        </a>
+        <a class="tab-item active" href="#">
+          <span class="tab-label">公告</span>
+        </a>
+      </nav>
+
+
+
+
+      <!-- 内容 -->
+      <div class="content infinite-scroll">
+        <div class="buttons-tab">
+          <a href="#tab8" class="tab-link active button">新闻</a>
+          <a href="#tab9" class="tab-link button">公告</a>
+        </div>
+        <div class="content-block">
+          <div class="tabs">
+            <div id="tab8" class="tab active">
+                 <div class="list-block">
+
+                 </div>
+                <div class="infinite-scroll-preloader">
+                    <div class="preloader"></div>
+                </div>
+ 
+            </div>
+            <div id="tab9" class="tab">
+               <div class="list-block">
+
+                 </div>
+                <div class="infinite-scroll-preloader">
+                    <div class="preloader"></div>
+                </div>
+            </div>
+          </div>
+        </div>
+                      
+      </div>
+    </div>
+
+
+    <!-- 新闻详情 -->
+    <div class="page" id="newsDetail">
+      <header class="bar bar-nav">
+        <a class="icon icon-left pull-left back" href="#search"></a>
+        <h1 class="title">详情信息</h1>
+      </header>
+      <div class="content">
+        <div class="card">
+          
+        </div>
+         
+      </div>  
+
+    </div>
+
+   
+
+
+
+
+
+    <!-- Left Panel with Reveal effect -->
+    <div class="panel panel-left panel-reveal theme-dark" id='panel-left-demo'>
+      <div class="content-block">
+        <p><a href="#" id="stuName">未登陆</a><span class="icon icon-left pull-right close-panel"></span></p>
+        <p id="stuNum">
+          
+        </p>
+        <p id="stuClass">
+          
+        </p>
+        <p>
+          <a href="#" class="button" id="changepswBtn">修改密码</a>
+        </p>
+        <div class="list-block">
+         <div id="zhuti" class="">
+          <ul>
+            <li class="item-content">
+              <div class="item-inner">
+                <div class="item-title">已借图书</div>
+                <div class="item-after hasY"></div>
+              </div>
+            </li>
+            <li class="item-content">
+              <div class="item-inner">
+                <div class="item-title">收藏图书</div>
+                <div class="item-after hasF"></div>
+              </div>
+            </li>
+          </ul>
+         
+            <p><a href="#" class="button disabled">主题</a></p>
+            <p><a href="#" class="button button-fill button-light" id="button-light">白天主题</a></p>
+            <p><a href="#" class="button button-fill button-dark" id="button-dark">夜间主题</a></p>
+            <p><a href="#" class="button button-fill button-danger" id="button-danger">粉色主题</a></p>
+            <p><a href="#" class="button button-fill button-success" id="button-success">绿色主题</a></p>
+            <p><a href="#" class="button button-fill button-warning" id="button-warning">黄色主题</a></p>
+          </div>
+          <ul id="changepsw" class="none">
+            <li>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-input">
+                    <input type="password" placeholder="原密码">
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-input">
+                    <input type="password" placeholder="新密码">
+                  </div>
+                </div>
+              </div>
+            </li>
+             <li>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-input">
+                    <input type="password" placeholder="确认密码">
+                  </div>
+                </div>
+              </div>
+            </li>
+             <li>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-input">
+                    <p><a href="#" class="button">确认</a></p>
+                    <p><a href="#" id="forgiveChangPsw" class="button">取消</a></p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+   
+    </div>
+     <!-- popup -->
+     <!--  <div class="popup my-popup">
+        <div class="content-block">
+          <p>About</p>
+          <p><a href="#" id="b">Close popup</a></p>
+          <p>Lorem ipsum dolor ...</p>
+        </div>
+      </div> -->
+
+
+
+
+
+
+
+    <!--js引用-->
+ 
+    <script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='js/sm.min.js' charset='utf-8'></script>
+    <script type="text/javascript" src="js/base64.js"></script>
+    <script type="text/javascript" src="js/ajax.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>
